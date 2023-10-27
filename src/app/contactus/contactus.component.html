@@ -1,0 +1,18 @@
+<p>contactus works!</p><br>
+<b>Address: Gavs,Sholinganallur,Chennai,Tamilnadu,India</b>
+<b>Email-ID: Gavs@gmail.com </b><br>
+<b>Phone-no: +44 123456789</b>
+<form #userForm="ngForm"  (ngSubmit)="addContact(userForm)">
+    FirstName : <input type="text" name="firstName" ngModel><br><br>
+    LastName : <input type="text" name="lastName" ngModel><br><br>
+    Email : <input type="text" name="email" ngModel><br><br>
+    Phone Number : <input type="text" name="mobileNumber" ngModel><br><br>
+    Address: <input type="text" name="Address" ngModel><br><br>
+    <input type="submit" value="Add"/><br><br>
+    <input type="button" value="GetUser" (click)="getContacts()"/><br><br>
+    <input type="button" value="Update" (click)="updateContact(userForm)"/><br><br>
+    <input type="button" value="Delete" (click)="deleteContact(userForm)"/><br><br>
+</form>
+<table>
+    <tr *ngFor="let user of contactsList"><td>{{user.firstName}}</td><td>{{user.LastName}}</td><td>{{user.email}}</td><td>{{user.mobileNumber}}</td><td>{{user.Address}}</td></tr>
+</table>

@@ -1,0 +1,8 @@
+
+<div>
+    <form #LoginForm="ngForm" >
+          <label>Username:</label><input type="text"  name="id" ngModel><br>
+          <label>Password:</label><input type="password" name="pass" ngModel><br>
+          <input type="button" value="Login" (click)="login(LoginForm)"/>
+    </form>  
+</div>    

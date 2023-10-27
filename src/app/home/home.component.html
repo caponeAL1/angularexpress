@@ -1,0 +1,36 @@
+
+    <legend>Enter User Data</legend>
+    <form #userData="ngForm" >
+      <label>UserID</label><input type="text" name="id" ngModel><br>
+      <label>Password</label><input type="text" name="pass" ngModel><br>
+      <label>EmailID:</label><input type="email" name="email" ngModel><br>
+   
+      <input type="button" value="Get" (click)="getAllUsers()"/>
+      <input type="button" value="Add User" (click)="addUser(userData)">
+      <input type="button" value="Update User" (click)="updateUser(userData)">
+      <input type="button" value="Delete User" (click)="deleteUser(userData)">
+      </form>
+    
+      <hr>
+      <!-- <hr>
+      <div>
+        <h2>User Found!</h2>
+        <table>
+          <tr><td>First Name</td><td>Last Name</td><td>Email</td><td>Join Date</td><td>Salary</td></tr>
+          <tr *ngFor="let user of getuserarray"><td>{{user.firstName}}</td><td>{{user.lastName}}</td><td>{{user.email}}</td><td>{{user.joinDate}}</td><td>{{user.salary}}</td></tr>
+        </table>
+       </div>
+       <hr> -->
+       <hr>
+       <!-- <br><label>{{this.expresponse}} </label><br><br> -->
+      <table>
+        <tr><td>UserID</td><td>Password</td><td>EmailID</td></tr>
+        <tr *ngFor="let user of detailsArray">
+          <td>{{user.userid}}</td>
+          <td>{{user.password}}</td>
+          <td>{{user.emailid}}</td>
+        </tr>
+        </table>
+
+  <router-outlet></router-outlet>
+  
